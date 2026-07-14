@@ -1,0 +1,100 @@
+      :root {
+        --bg-main: #06040a;
+        --bg-card: rgba(18, 11, 28, 0.4);
+        --border-color: rgba(168, 85, 247, 0.12);
+        --text-main: #f3f4f6;
+        --text-muted: #8b809a;
+        --accent-blue: #a855f7;
+      }
+      body.light-theme {
+        --bg-main: #f9fafb;
+        --bg-card: rgba(255, 255, 255, 0.85);
+        --border-color: rgba(168, 85, 247, 0.15);
+        --text-main: #1f2937;
+        --text-muted: #6b7280;
+        --accent-blue: #8b5cf6;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+      .container {
+        max-width: 800px;
+        width: 100%;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 30px;
+        transition: opacity 0.2s;
+      }
+      .back-btn:hover {
+        opacity: 0.8;
+      }
+      .glass-panel {
+        background-color: var(--bg-card);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+      body.light-theme .glass-panel {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      }
+      .logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        margin-bottom: 25px;
+        text-decoration: none;
+        width: fit-content;
+        transition: opacity 0.2s;
+      }
+      .logo-wrapper:hover {
+        opacity: 0.85;
+      }
+      .logo-text {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        background: linear-gradient(135deg, #0ea5e9, #a855f7, #d946ef);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h1 {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: var(--text-main);
+      }
+      .content {
+        line-height: 1.7;
+        font-size: 15px;
+      }
+      .content p {
+        margin-bottom: 15px;
+      }
+      .content b {
+        color: var(--accent-blue);
+      }
+    
